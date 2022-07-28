@@ -1,0 +1,9 @@
+.container {
+  border: 0.1em solid red;
+}
+.votingContainer {
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  border: 0.1em solid blueviolet;
+}
