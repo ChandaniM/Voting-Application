@@ -1,9 +1,68 @@
+body {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+}
 .container {
-  border: 0.1em solid red;
+  padding: 0.5em;
 }
 .votingContainer {
-  width: 30em;
-  display: flex;
   flex-direction: column;
-  border: 0.1em solid blueviolet;
+}
+.input {
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 1em 0em;
+  font-size: 1.2em;
+  background: transparent;
+  border-bottom: 0.1em solid #fff;
+}
+.options {
+  margin-top: 1em;
+  height: 2em;
+}
+.submit {
+  outline: none;
+  border: none;
+  height: 2em;
+  border-radius: 0.4em;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #006400;
+  margin-top: 1.5em;
+}
+.display {
+  padding: 0.5em;
+  background-color: #212121;
+}
+.displayContainer {
+  padding-bottom: 1.2em;
+}
+.Leaderboard,
+.votingContainer {
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #212121;
+}
+/*Desktop Code*/
+@media only screen and (min-width: 800px) {
+  .subContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .votingContainer,
+  .Leaderboard {
+    width: 46%;
+  }
 }
