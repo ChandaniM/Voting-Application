@@ -3,8 +3,12 @@ body {
   background-color: #000;
   color: #fff;
 }
-h1 {
+h1,
+h2 {
   text-align: center;
+}
+h2 {
+  padding: 0.4em;
 }
 .flex {
   display: flex;
@@ -43,17 +47,26 @@ h1 {
   margin-top: 1.5em;
 }
 .display {
-  padding: 0.5em;
   background-color: #212121;
+  padding-bottom: 2em;
 }
 .displayContainer {
-  padding-bottom: 1.2em;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 1em;
 }
 .Leaderboard,
 .votingContainer {
   padding: 1em;
   margin-bottom: 1em;
   background-color: #212121;
+}
+.displayLeaderContainer {
+  width: 100%;
+}
+tr,
+td {
+  text-align: center;
 }
 /*Desktop Code*/
 @media only screen and (min-width: 800px) {

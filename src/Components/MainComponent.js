@@ -1,9 +1,9 @@
 import React from "react";
-import Vooting from "./AddComponent";
+import Voting from "./AddComponent";
 function MainComponent() {
   return (
     <div className='main'>
-      <Vooting />
+      <Voting />
     </div>
   );
 }
