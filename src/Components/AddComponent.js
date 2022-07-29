@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Stylesheets/Style.css";
-
+import Voter from "./VoterComponent";
 function AddComponent() {
   let newDate = new Date();
   const allOptions = [
@@ -26,8 +26,7 @@ function AddComponent() {
   const [text, settext] = useState("");
   const [points, setpoint] = useState("");
   const [useroption, setoption] = useState("");
-
-  const [componentArray, addComponent] = useState([]);
+  const [componentArray, addVoterDetails] = useState([]);
 
   const [leaderArray, addLeaderDetails] = useState(leaderboardArray);
   const addVote = () => {
@@ -55,7 +54,7 @@ function AddComponent() {
       );
       // array.push(value);
       //push
-      addComponent((componentArray) => [...componentArray, obj]);
+      addVoterDetails((componentArray) => [...componentArray, obj]);
       settext("");
       setoption("");
       setpoint("");
@@ -104,26 +103,29 @@ function AddComponent() {
           </select>
 
           <button onClick={addVote} className='submit'>
-            submit
+            Give Points!
           </button>
         </div>
         <div className='Leaderboard'>
-          <h1 className=''>Leaderboard</h1>
+          <h2>Leaderboard</h2>
           <table className='displayLeaderContainer'>
-            <thead>
+            {/* <thead>
               <tr>
                 <th>Sr.no</th>
                 <th>Top Score</th>
                 <th>Points</th>
               </tr>
-            </thead>
+            </thead> */}
             <tbody>
               {leaderArray.map((element, index) => {
                 return (
                   <tr key={index}>
-                    <td>#{index + 1}</td>
-                    <td>{element.name}</td>
-                    <td>{element.points}</td>
+                    <td className='leadertd'>#{index + 1}</td>
+                    <td className='leadernametd'>{element.name}</td>
+                    <td>
+                      {element.points}
+                      {" Points"}
+                    </td>
                   </tr>
                 );
               })}
@@ -131,35 +133,7 @@ function AddComponent() {
           </table>
         </div>
       </div>
-      <div className='display'>
-        <h2>All Votes</h2>
-        <table className='displayContainer'>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Voter</th>
-              <th>option</th>
-              <th>points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {componentArray.map((element, index) => {
-              return (
-                <tr key={index}>
-                  <td>
-                    {new Date(element.datesub).toLocaleDateString()}
-                    {", "}
-                    {new Date(element.datesub).toLocaleTimeString()}{" "}
-                  </td>
-                  <td>{element.voter}</td>
-                  <td>{element.option}</td>
-                  <td>{element.points}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <Voter voterArray={componentArray} />
     </div>
   );
 }

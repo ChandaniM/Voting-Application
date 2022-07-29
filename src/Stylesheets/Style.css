@@ -5,6 +5,7 @@ body {
 }
 h1,
 h2 {
+  color: #39ff14;
   text-align: center;
 }
 h2 {
@@ -55,14 +56,29 @@ h2 {
   margin: 0 auto;
   padding-bottom: 1em;
 }
-.Leaderboard,
 .votingContainer {
   padding: 1em;
-  margin-bottom: 1em;
+}
+.Leaderboard,
+.votingContainer {
   background-color: #212121;
 }
 .displayLeaderContainer {
   width: 100%;
+  margin: 0 0.5em;
+}
+.votehead {
+  color: #39ff14;
+}
+.leadertd,
+.leadernametd {
+  text-align: left;
+  width: 4%;
+  /* border: 1px solid #fff; */
+  white-space: nowrap;
+}
+.leadernametd {
+  width: 80%;
 }
 tr,
 td {
@@ -76,6 +92,6 @@ td {
   }
   .votingContainer,
   .Leaderboard {
-    width: 46%;
+    width: 48%;
   }
 }
